@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Pulse — privacy policy</title>
+  <meta name="description" content="How Page Pulse for Confluence Cloud processes response records, page metadata and support messages.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#0c66e4"/><path d="M5 17h4l2-4 3 9 2-12 2 7h9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="27" cy="17" r="1.8" fill="#ffab00"/></svg></span>
+      Page Pulse
+    </a>
+    <nav aria-label="Site">
+      <a href="docs.html">Docs</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Privacy policy</h1>
+    <p class="legal-meta">Last updated: 28 November 2026</p>
+
+    <h2>Who we are</h2>
+    <p>Page Pulse is a free Confluence Cloud app published by <strong>Ollie Guan, an independent developer</strong>. Contact: <a href="mailto:atlassian@foxmail.com">atlassian@foxmail.com</a>.</p>
+
+    <h2>What the app does</h2>
+    <p>Page Pulse adds a macro for polls, ratings and RSVPs to Confluence pages. People respond on the page; the app counts responses and shows results in the macro and a response count in the page byline.</p>
+
+    <h2>Data the app processes</h2>
+    <ul>
+      <li><strong>Response records.</strong> When a person votes or responds, the app stores their Atlassian account ID, the selected option or options, and a timestamp in Forge KVS, scoped to the app installation.</li>
+      <li><strong>Page metadata.</strong> The page ID and the pulse key (a hash of the question and options) are part of the storage key so responses stay with the right page and pulse.</li>
+      <li><strong>Display names.</strong> When results or a CSV include voter names, the app reads the display name from Confluence at that moment. Names and email addresses are <strong>not stored</strong> by the app.</li>
+      <li><strong>Configuration.</strong> Mode, question, options, close date, visibility and name-hiding settings are stored in the Confluence macro configuration, under the customer's control.</li>
+    </ul>
+
+    <p>The app does <strong>not</strong>:</p>
+    <ul>
+      <li>send page, response or user data to an external server;</li>
+      <li>use runtime AI or LLM services;</li>
+      <li>collect analytics, advertising identifiers or user profiles;</li>
+      <li>read or store email addresses, page bodies or attachments.</li>
+    </ul>
+
+    <h2>Why we process it</h2>
+    <ul>
+      <li>To record and count responses on the page where the pulse was inserted.</li>
+      <li>To show results, voter names (when enabled) and a CSV export.</li>
+      <li>To enforce one response per person and allow a person to change or remove their own response.</li>
+      <li>To answer support requests you send us.</li>
+    </ul>
+
+    <h2>Legal basis and retention</h2>
+    <p>The app processes response data on the customer's instructions to provide the feature. The customer controls the page and the macro; removing a response or uninstalling the app controls retention. Forge KVS retains app data for 28 days after uninstall, after which it is deleted according to Atlassian's policy. Support emails are retained only as long as needed to resolve the request, unless a longer period is required by law.</p>
+
+    <h2>Sharing</h2>
+    <p>The app does not sell data or share it with third parties. Atlassian hosts the Forge runtime and KVS under its own terms and privacy policy. No external processors are used for app data.</p>
+
+    <h2>Security</h2>
+    <ul>
+      <li>Access to a page and its results follows the user's Confluence permissions.</li>
+      <li>The app checks that the caller can read the page before accepting a response.</li>
+      <li>Forge KVS is scoped per app installation and hosted by Atlassian.</li>
+      <li>The app requests only the scopes listed in its Marketplace Privacy &amp; Security tab.</li>
+    </ul>
+
+    <h2>Your choices</h2>
+    <ul>
+      <li>Change or remove your own response from the macro.</li>
+      <li>Ask the page owner or the publisher to remove a response.</li>
+      <li>Uninstall the app to remove app storage, subject to Atlassian's 28-day retention window.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>The app is a workplace collaboration tool and is not directed to children.</p>
+
+    <h2>Changes</h2>
+    <p>We will update this policy if the app's data handling changes and will post the new date here.</p>
+
+    <h2>Contact</h2>
+    <p><strong>Ollie Guan, independent developer</strong><br>
+    <a href="mailto:atlassian@foxmail.com">atlassian@foxmail.com</a><br>
+    No postal address is published; please contact by email.</p>
+  </main>
+
+  <footer>
+    <p>Page Pulse is published by Ollie Guan, an independent developer.</p>
+    <p>Contact: <a href="mailto:atlassian@foxmail.com">atlassian@foxmail.com</a></p>
+  </footer>
+</body>
+</html>
