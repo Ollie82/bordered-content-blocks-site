@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Pulse — quick start and documentation</title>
+  <meta name="description" content="How to insert and configure Page Pulse polls, ratings and RSVPs in Confluence, plus results, CSV, permissions and known limitations.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#0c66e4"/><path d="M5 17h4l2-4 3 9 2-12 2 7h9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="27" cy="17" r="1.8" fill="#ffab00"/></svg></span>
+      Page Pulse
+    </a>
+    <nav aria-label="Site">
+      <a href="docs.html" aria-current="page">Docs</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Quick start</h1>
+    <p class="lead">Page Pulse is one macro with three modes. Everything is configured from the macro dialog; there is no separate admin setup.</p>
+
+    <h2>Insert a pulse</h2>
+    <ol>
+      <li>Open a Confluence page in edit mode.</li>
+      <li>Type <code>/Page Pulse</code> and choose the macro.</li>
+      <li>Pick <strong>Poll</strong>, <strong>Rating</strong> or <strong>RSVP</strong>.</li>
+      <li>Write the question or prompt, fill in the options, and choose when results should be visible.</li>
+      <li>Save the macro, then publish the page.</li>
+    </ol>
+
+    <h2>Poll</h2>
+    <p>Add two to ten options. A poll can be single-choice or multi-select, and can close on a date. Results can be visible always, only after a person votes, or only after the poll closes.</p>
+
+    <h2>Rating</h2>
+    <p>People choose one to five stars. The macro shows the average and the distribution across the five values. A rating has no options to configure.</p>
+
+    <h2>RSVP</h2>
+    <p>People choose <strong>Going</strong>, <strong>Maybe</strong> or <strong>Can't go</strong>. Set an optional capacity to limit the number of “Going” responses; when the event is full, new “Going” responses are declined and the remaining choices stay available.</p>
+
+    <h2>Results and visibility</h2>
+    <ul>
+      <li><strong>Always</strong> — results are visible as soon as the page is published.</li>
+      <li><strong>After a person votes</strong> — each person sees results after their own response.</li>
+      <li><strong>After the pulse closes</strong> — results stay hidden until the close date.</li>
+      <li>Voter names can be hidden from results and CSV.</li>
+    </ul>
+
+    <h2>Change or remove a response</h2>
+    <p>One response is allowed per person per pulse. A person can change their choice or remove their response from the macro at any time. Removing a response decrements the totals immediately.</p>
+
+    <h2>Download CSV</h2>
+    <p>When results are visible to you, choose <strong>Download CSV</strong> to get the question, options, counts and response timestamps. The file is named after the page ID, for example <code>page-pulse-8716289.csv</code>.</p>
+
+    <h2>Byline count</h2>
+    <p>Page Pulse adds an item to the page byline showing the total number of responses collected on that page across all pulses. The count refreshes when the page is reloaded.</p>
+
+    <h2>Permissions and data</h2>
+    <ul>
+      <li>Responses follow the page's Confluence permissions. A person who cannot read the page cannot respond.</li>
+      <li>The app stores the Atlassian account ID, the selected choice and a timestamp in Forge KVS. Display names are read from Confluence at view time and are not stored.</li>
+      <li>The app does not send data to an external server, use runtime AI, or collect analytics or advertising identifiers.</li>
+    </ul>
+
+    <h2>Known limitations (v0.1)</h2>
+    <ul>
+      <li>Two pulses with the same question and options on the same page share one result set. Change the question to separate them.</li>
+      <li>Close dates are interpreted as the end of the day in UTC.</li>
+      <li>Up to 10 voter names are shown inline and included in the CSV; larger polls show counts and “+N more”.</li>
+      <li>RSVP capacity is checked before the write, not in a transaction; two simultaneous “Going” responses can overshoot by one.</li>
+      <li>There is no “delete all results” action; responses are removed per person.</li>
+      <li>Live docs and blog posts are not verified; the macro is designed for pages.</li>
+    </ul>
+
+    <h2>Troubleshooting</h2>
+    <h3>The macro shows a loading message</h3>
+    <p>Reload the page. If it persists, check that the app is installed for the site and that you can read the page.</p>
+
+    <h3>My vote did not appear</h3>
+    <p>Reload the page and try again. If the page is restricted, ask the page owner for access. If the problem continues, contact support with the site URL, page ID and the time of the attempt.</p>
+
+    <h3>The byline count looks stale</h3>
+    <p>The byline refreshes with the page. Reload after new responses to see the latest total.</p>
+
+    <div class="links">
+      <a class="button" href="support.html">Contact support</a>
+      <a class="button secondary" href="privacy.html">Privacy policy</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Page Pulse is published by Ollie Guan, an independent developer.</p>
+    <p>Contact: <a href="mailto:atlassian@foxmail.com">atlassian@foxmail.com</a></p>
+  </footer>
+</body>
+</html>
